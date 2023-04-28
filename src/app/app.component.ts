@@ -7,4 +7,5 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'home';
+  backgroundImageUrl: string = 'https://i.imgur.com/MaF9z5Q.jpeg';
 }
