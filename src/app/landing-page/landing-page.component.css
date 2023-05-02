@@ -73,16 +73,40 @@ img {
 /* NAVBAR */
 .navbar {
     box-shadow: var(--box-shadow);
+    background-color: #212529;
 }
 
 .navbar-nav .nav-link {
-    font-weight: 500;
-    color: var(--c-dark);
+    font-weight: 400;
+    color: #fff;
 }
 
 .navbar-nav .nav-link.active {
     color: var(--c-brand);
 }
+
+.nav-item {
+    position: relative;
+    text-decoration: none;
+  }
+  
+  .nav-item::after {
+    content: "";
+    display: block;
+    height: 2px;
+    width: 20%;
+    background-color: rgb(102, 174, 44);
+    position: absolute;
+    bottom: 5px;
+    left: 8%;
+    opacity: 0;
+    transition: opacity 0.3s, width 0.5s;
+  }
+  
+  .nav-item:hover::after {
+    opacity: 1;
+    width: 40%;
+  }
 
 
 /* BTN */
@@ -309,17 +333,50 @@ footer .line {
 }
 
 .social-icons a {
-    width: 40px;
-    height: 40px;
+    font-size: 30px;
+    margin-left: 30px;
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    background-color: rgba(255,255,255,0.1);
-    border-radius: 100px;
+    color: azure;
 }
 
 .social-icons a:hover {
     background-color: var(--c-brand);
-    color: white;
+    color: rgb(22, 21, 21);
+}
+
+.btn-cadastrar{
+    width: 380px;
+    height: 90px;
+    font-size: 35px;
+    border-radius: 50px 50px 50px 50px;
+    background: linear-gradient(90deg, rgba(1,186,18,1) 0%, rgba(40,170,1,1) 50%, rgba(178,203,0,1) 100%);
+}
+
+.double-arrow-down{
+    margin-left: -6px;
+    position: relative;
+    transform: translateY(30%);
+}
+
+.card-proposito{
+    background-color: rgba(40, 170, 1, 0.7);
+    border-radius: 10px 10px 10px 10px;
+    float: right;
+    font-size: 30px;
+}
+
+.text-desc{
+    text-decoration: none;
+    opacity: 1;
+}
+
+.btn-pos{
+    position: absolute;
+    right: 0;
+    width: 210px;
+    height: 50px;
+    font-size: 20px;
 }
 

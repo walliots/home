@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { faCoffee, faPlug, faClock } from '@fortawesome/free-solid-svg-icons';
+import { faTwitter, faFacebook, faInstagram } from '@fortawesome/free-brands-svg-icons';
+import { FaIconLibrary } from '@fortawesome/angular-fontawesome';
 import AOS from 'aos';
 
 @Component({
@@ -8,9 +11,23 @@ import AOS from 'aos';
 })
 export class LandingPageComponent implements OnInit {
 
-  backgroundImageUrl: string = 'https://i.imgur.com/MaF9z5Q.jpeg';
+  faCoffee = faCoffee;
+  faTwitter = faTwitter;
+  faFacebook = faFacebook;
+  faInstagram = faInstagram;
+  faPlug = faPlug;
+  faClock = faClock;
 
-  constructor() { }
+  backgroundImageUrl: string = 'https://imgur.com/pOf3dDn.png';
+
+  constructor(library : FaIconLibrary) {
+    library.addIcons(faTwitter)
+    library.addIcons(faFacebook)
+    library.addIcons(faInstagram)
+    library.addIcons(faPlug)
+    library.addIcons(faCoffee)
+    library.addIcons(faClock)
+   }
 
   ngOnInit(): void {
     // Selecione todos os links da página
